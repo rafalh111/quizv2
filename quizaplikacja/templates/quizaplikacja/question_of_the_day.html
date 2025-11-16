@@ -1,0 +1,13 @@
+<h1>Pytanie dnia</h1>
+<p>{{ question.text }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+    {% for c in question.choices %}
+        <label>
+            <input type="radio" name="answer" value="{{ c }}" required>
+            {{ c }}
+        </label><br>
+    {% endfor %}
+    <button type="submit">Sprawdź</button>
+</form>

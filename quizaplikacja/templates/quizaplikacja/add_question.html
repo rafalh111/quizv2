@@ -1,0 +1,23 @@
+<h1>Dodaj pytanie</h1>
+
+{% if error %}
+<p style="color: red;">{{ error }}</p>
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Pytanie:</label><br>
+    <input name="text" required><br><br>
+
+    <label>Odpowiedzi (wiele):</label><br>
+    <input name="choices"><br>
+    <input name="choices"><br>
+    <input name="choices"><br>
+    <input name="choices"><br><br>
+
+    <label>Poprawna odpowiedź:</label><br>
+    <input name="answer" required><br><br>
+
+    <button type="submit">Dodaj</button>
+</form>

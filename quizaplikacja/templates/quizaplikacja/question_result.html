@@ -1,0 +1,12 @@
+<h1>Wynik</h1>
+
+<p>Pytanie: {{ question.text }}</p>
+<p>Twoja odpowiedź: {{ user_answer }}</p>
+
+{% if correct %}
+    <p style="color: green;">Dobrze!</p>
+{% else %}
+    <p style="color: red;">Źle! Poprawna odpowiedź: {{ question.answer }}</p>
+{% endif %}
+
+<a href="/">Wróć</a>
