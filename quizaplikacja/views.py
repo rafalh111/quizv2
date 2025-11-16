@@ -8,7 +8,6 @@ def question_of_the_day(request):
     dq = DailyQuestion.get_today()
     q = dq.question
 
-    # If the user clicked "Submit"
     if request.method == "POST":
         user_answer = request.POST.get("answer")
         correct = (user_answer == q.answer)
@@ -18,7 +17,6 @@ def question_of_the_day(request):
             "user_answer": user_answer,
         })
 
-    # Otherwise just show the question
     return render(request, "quizaplikacja/question_of_the_day.html", {"question": q})
 
 def add_question(request):

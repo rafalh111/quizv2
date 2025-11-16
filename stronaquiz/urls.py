@@ -20,6 +20,6 @@ from quizaplikacja import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.question_of_the_day, name='question_of_the_day'),  # homepage
-    path('add/', views.add_question, name='add_question'),             # add question page
+    path('', views.question_of_the_day, name='question_of_the_day'),
+    path('add/', views.add_question, name='add_question'),
 ]
